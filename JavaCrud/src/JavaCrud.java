@@ -100,7 +100,7 @@ public class JavaCrud {
 		frame.getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Crud Java");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 0));
 		lblNewLabel.setBounds(319, 10, 177, 33);
 		frame.getContentPane().add(lblNewLabel);
 		
@@ -318,7 +318,7 @@ public class JavaCrud {
 				 getSearch = search.getText();
 				 
 				 try {
-				        pst = con.prepareStatement("update personne set nom= ?,prenom= ?, addresse= ?, where id=?");
+				        pst = con.prepareStatement("update personne set nom= ?,prenom= ?, addresse= ? where id=?");
 				        pst.setString(1, getNom);
 				        pst.setString(2, getPrenom);
 				        pst.setString(3, getAddresse);
